@@ -1,0 +1,21 @@
+/* Dashboard Empresa Específico */
+/* Todos os estilos principais estão no global.css */
+
+.formulario-empresa {
+    max-width: 800px;
+}
+
+.botao-dashboard.botao-remover {
+    background: transparent;
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+.botao-dashboard.botao-remover:hover {
+    background: var(--danger);
+    color: var(--white);
+}
+
+table td {
+    white-space: nowrap;
+}

@@ -1,0 +1,14 @@
+/* Dashboard Estudante Específico */
+/* Todos os estilos principais estão no global.css */
+
+.perfil-card {
+    background: linear-gradient(to right, rgba(99, 102, 241, 0.05), transparent);
+}
+
+@media (max-width: 640px) {
+    .perfil-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+}

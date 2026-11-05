@@ -1,0 +1,138 @@
+.cabecalho-interno {
+  position: relative;
+  box-shadow: var(--shadow-xs);
+}
+
+.page-content {
+  padding: 40px 24px 80px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: var(--gray-500);
+  font-size: var(--text-base);
+}
+
+.grid-vagas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card-vaga {
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-vaga:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-vaga-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.empresa-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.empresa-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--brand-100);
+  color: var(--brand-600);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+}
+
+.empresa-info h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.empresa-info span {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.card-vaga-body {
+  padding: 24px;
+  flex: 1;
+}
+
+.vaga-descricao {
+  color: var(--gray-600);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vaga-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detalhe-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-700);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.detalhe-item svg {
+  color: var(--gray-400);
+}
+
+.card-vaga-footer {
+  padding: 20px 24px;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-100);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  margin-top: auto;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

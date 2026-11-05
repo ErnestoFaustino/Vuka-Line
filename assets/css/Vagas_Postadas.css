@@ -1,0 +1,135 @@
+.cabecalho-interno {
+  position: relative;
+  box-shadow: var(--shadow-xs);
+}
+
+.page-content {
+  padding: 40px 24px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: var(--gray-500);
+  font-size: var(--text-base);
+}
+
+.lista-vagas {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card-vaga-detalhe {
+  padding: 32px;
+  border-left: 4px solid var(--brand-500);
+}
+
+.vaga-info-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.vaga-info-principal h2 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -.02em;
+}
+
+.vaga-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.vaga-detalhes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  background: var(--gray-50);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-100);
+}
+
+.detalhe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detalhe-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gray-500);
+  letter-spacing: .04em;
+}
+
+.detalhe-valor {
+  font-size: var(--text-sm);
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+.vaga-descricao-box {
+  margin-bottom: 24px;
+}
+
+.vaga-descricao-box p {
+  margin-top: 8px;
+  color: var(--gray-700);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  background: var(--white);
+  padding: 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+
+.vaga-acoes {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--gray-100);
+  padding-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .vaga-info-principal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .vaga-detalhes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card-vaga-detalhe {
+    padding: 24px;
+  }
+}

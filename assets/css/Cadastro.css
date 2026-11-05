@@ -1,0 +1,191 @@
+.tela-cadastro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-50);
+  padding: 40px 20px;
+}
+
+.container-pequeno {
+  width: 100%;
+  max-width: 520px;
+}
+
+.logo-voltar {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  display: block;
+  margin: 0 auto;
+}
+
+.caixa-cadastro {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+}
+
+.cabecalho-form {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cabecalho-form h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+}
+
+.cabecalho-form .subtitle {
+  color: var(--gray-500);
+  font-size: var(--text-sm);
+}
+
+/* Tabs */
+.controle-cadastro {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.alternador-perfil {
+  display: flex;
+  background: var(--gray-100);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  margin-bottom: 32px;
+}
+
+.aba-botao {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  border-radius: var(--radius-sm);
+  transition: all .2s ease;
+  text-align: center;
+}
+
+#cadastro-estudante:checked ~ .alternador-perfil .aba-estudante,
+#cadastro-empresa:checked ~ .alternador-perfil .aba-empresa {
+  background: var(--white);
+  color: var(--gray-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-container {
+  display: none;
+  animation: fadeIn .3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#cadastro-estudante:checked ~ .form-estudante,
+#cadastro-empresa:checked ~ .form-empresa {
+  display: block;
+}
+
+/* Form Styles */
+.formulario-vuka {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.termos {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.termos input[type="checkbox"] {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.termos label {
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+  line-height: var(--leading-normal);
+  cursor: pointer;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 12px;
+  font-size: var(--text-base);
+}
+
+.link-login {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  margin-top: 24px;
+}
+
+.link-login a {
+  color: var(--brand-600);
+  font-weight: 600;
+}
+
+.link-login a:hover {
+  color: var(--brand-700);
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.alert-info {
+  background: var(--brand-50);
+  color: var(--brand-700);
+  border: 1px solid var(--brand-100);
+}
+
+@media (max-width: 480px) {
+  .caixa-cadastro {
+    padding: 24px;
+  }
+  .linha-dupla {
+    grid-template-columns: 1fr;
+  }
+  .tela-cadastro {
+    padding: 24px 16px;
+  }
+}

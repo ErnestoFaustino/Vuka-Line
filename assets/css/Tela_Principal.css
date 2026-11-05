@@ -1,0 +1,172 @@
+/* --- Componentes Específicos da Homepage --- */
+
+/* Hero Section */
+.secao-hero {
+  background: var(--gray-900);
+  padding: 64px 0 80px;
+  color: var(--white);
+  border-bottom: 1px solid var(--gray-800);
+}
+
+.container-hero {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.hero-conteudo {
+  flex: 1;
+  max-width: 560px;
+}
+
+.hero-conteudo h1 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  margin-bottom: 20px;
+  letter-spacing: -.02em;
+}
+
+.hero-conteudo h1 span {
+  color: var(--brand-400);
+}
+
+.hero-conteudo p {
+  font-size: var(--text-lg);
+  color: var(--gray-400);
+  margin-bottom: 32px;
+  line-height: var(--leading-relaxed);
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-estatisticas {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.cartao-status {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cartao-status .numero {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.cartao-status .rotulo {
+  color: var(--gray-400);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* Como Funciona */
+.secao-passos {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.grade-passos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cartao-passo {
+  background: var(--gray-50);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.cartao-passo:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.icone-circulo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-100);
+  color: var(--brand-600);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+.cartao-passo h3 {
+  font-size: var(--text-lg);
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.cartao-passo p {
+  color: var(--gray-600);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+/* CTA */
+.secao-chamada {
+  background: var(--brand-50);
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid var(--brand-100);
+}
+
+.container-chamada h2 {
+  font-size: var(--text-2xl);
+  color: var(--gray-900);
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.container-chamada p {
+  font-size: var(--text-lg);
+  color: var(--gray-600);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botoes-chamada {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .container-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+  }
+  
+  .hero-conteudo h1 { font-size: var(--text-3xl); }
+  .hero-botoes { justify-content: center; }
+  .grade-passos { grid-template-columns: 1fr; }
+  .botoes-chamada { flex-direction: column; }
+}

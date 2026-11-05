@@ -1,0 +1,119 @@
+.secao-pilares {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.grade-pilares {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.cartao-pilar {
+  padding: 40px 32px;
+  text-align: center;
+  transition: transform .2s ease;
+}
+
+.cartao-pilar:hover {
+  transform: translateY(-4px);
+}
+
+.icone-pilar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-50);
+  color: var(--brand-600);
+}
+
+.cartao-pilar h3 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.cartao-pilar p {
+  color: var(--gray-600);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+.secao-fluxo {
+  padding: 80px 0;
+  background-color: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+}
+
+.grade-fluxo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.caixa-fluxo {
+  padding: 40px;
+}
+
+.topo-fluxo {
+  font-weight: 700;
+  font-size: var(--text-xl);
+  margin-bottom: 32px;
+  color: var(--gray-900);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topo-fluxo::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand-500);
+}
+
+.lista-passos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lista-passos li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--gray-700);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.lista-passos span {
+  background: var(--brand-100);
+  color: var(--brand-700);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .grade-fluxo {
+    grid-template-columns: 1fr;
+  }
+  .caixa-fluxo {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,170 @@
+/* --- Layout Dividido (Split Screen) --- */
+.tela-split {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.lado-visual {
+  flex: 1;
+  background: linear-gradient(135deg, var(--brand-700) 0%, var(--brand-500) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  padding: 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito sutil no fundo do lado visual */
+.lado-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 40%);
+}
+
+.visual-content {
+  position: relative;
+  max-width: 480px;
+  text-align: left;
+}
+
+.visual-content h2 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -.02em;
+}
+
+.visual-content p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--brand-100);
+}
+
+.lado-formulario {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: var(--white);
+}
+
+.caixa-login {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-voltar {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  margin: 0 auto 16px;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo-voltar h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  color: var(--gray-500);
+  font-size: var(--text-sm);
+}
+
+.formulario-vuka {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 4px;
+}
+
+.form-actions {
+  margin-top: 8px;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 12px;
+  font-size: var(--text-base);
+}
+
+.link-cadastro {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  margin-top: 16px;
+}
+
+.link-cadastro a {
+  color: var(--brand-600);
+  font-weight: 600;
+}
+
+.link-cadastro a:hover {
+  color: var(--brand-700);
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.alert-info {
+  background: var(--brand-50);
+  color: var(--brand-700);
+  border: 1px solid var(--brand-100);
+}
+
+/* Esconde o lado visual em telas menores */
+@media (max-width: 860px) {
+  .lado-visual {
+    display: none;
+  }
+  .tela-split {
+    background-color: var(--gray-50);
+  }
+  .lado-formulario {
+    background: transparent;
+  }
+  .caixa-login {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+  }
+}
+
+@media (max-width: 480px) {
+  .lado-formulario {
+    padding: 16px;
+  }
+  .caixa-login {
+    padding: 24px;
+  }
+}
